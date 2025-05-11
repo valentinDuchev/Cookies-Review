@@ -84,23 +84,6 @@ The system integrates with Shopify to fetch product data and stores reviews in a
 
 The application follows a client-server architecture:
 
-\`\`\`
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│                 │      │                 │      │                 │
-│  React Frontend │<────>│  Node.js Server │<────>│ Shopify API     │
-│  (Vite)         │      │  (Express)      │      │                 │
-│                 │      │                 │      │                 │
-└─────────────────┘      └────────┬────────┘      └─────────────────┘
-                                  │
-                                  │
-                         ┌────────▼────────┐
-                         │                 │
-                         │  Local JSON DB  │
-                         │  (db.json)      │
-                         │                 │
-                         └─────────────────┘
-\`\`\`
-
 - **Frontend**: React application built with Vite
 - **Backend**: Node.js with Express
 - **External API**: Shopify for product data
