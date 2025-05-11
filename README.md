@@ -10,7 +10,7 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/Cookies-Review.git
-   cd cookie-shop-review-system
+   cd Cookies-Review
 
 
 2. Install server dependencies:
@@ -21,16 +21,20 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 3. Install client dependencies:
    ```bash
     cd ../client
+    cd react-review-app
     npm install
 
 4. Start the server:
    ```bash
-    cd ../server
-    npm run dev
+    cd ../../server
+    *Add a .env file*
+    *.env variables have been sent to you via email*    
+    node server.js
 
 5. Start the client:
    ```bash
     cd ../client
+    cd react-review-app
     npm run dev
 
 6. Open your browser and navigate to `http://localhost:5173`
