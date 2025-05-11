@@ -14,28 +14,24 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 
 
 2. Install server dependencies:
-\`\`\`bash
+   ```bash
 cd server
 npm install
-\`\`\`
 
 3. Install client dependencies:
-\`\`\`bash
+   ```bash
 cd ../client
 npm install
-\`\`\`
 
 4. Start the server:
-\`\`\`bash
+   ```bash
 cd ../server
 npm run dev
-\`\`\`
 
 5. Start the client:
-\`\`\`bash
+   ```bash
 cd ../client
 npm run dev
-\`\`\`
 
 6. Open your browser and navigate to `http://localhost:5173`
 
