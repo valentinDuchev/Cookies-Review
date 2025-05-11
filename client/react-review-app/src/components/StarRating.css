@@ -1,0 +1,37 @@
+.star-rating {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-right: 2px;
+    cursor: default;
+  }
+  
+  .star.filled {
+    color: #ffc107;
+  }
+  
+  .star.empty {
+    color: #e0e0e0;
+  }
+  
+  .star-rating.editable .star {
+    cursor: pointer;
+  }
+  
+  /* Remove the problematic hover selectors that were causing the right-to-left behavior */
+  /* Instead, we're now handling hover state with React state in the component */
+  
+  /* Add smaller stars for the rating bars */
+  .stars-label .star-rating .star {
+    font-size: 1rem;
+  }
+  
+  /* Make stars in the overall rating larger */
+  .overall-rating .star-rating .star {
+    font-size: 1.4rem;
+  }
+  

@@ -1,0 +1,203 @@
+/* Global styles */
+:root {
+  --primary-color: #8b4513;
+  --primary-hover: #6b3000;
+  --secondary-color: #f5f5dc;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #ddd;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%; /* Allow container to take full width */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* For content that needs some constraint */
+.content-container {
+  width: 100%;
+  max-width: 1800px; /* Increased from 1600px */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw; /* Ensure app takes full viewport width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 0 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+  opacity: 0.8;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-contact p {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Loading and Error States */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: var(--light-text);
+}
+
+.error {
+  color: var(--error-color);
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid var(--error-color);
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-logo {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+}
+
+/* Add a class for extra wide screens */
+@media (min-width: 1600px) {
+  .content-container {
+    max-width: 80%; /* Use percentage instead of fixed width */
+  }
+
+  /* Increase font sizes slightly for better readability on large screens */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* For ultra-wide screens */
+@media (min-width: 2400px) {
+  .content-container {
+    max-width: 70%; /* Further reduce width percentage for ultra-wide screens */
+  }
+}

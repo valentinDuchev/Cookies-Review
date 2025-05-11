@@ -1,0 +1,150 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar.scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.7rem 2rem;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Allow full width */
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .navbar-brand a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-menu a:hover::after,
+  .navbar-menu a.active::after {
+    width: 100%;
+  }
+  
+  .navbar-menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-menu-toggle {
+      display: block;
+    }
+  
+    .navbar-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 200px;
+      padding: 1rem;
+      border-radius: 0 0 0 8px;
+      box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      gap: 1rem;
+    }
+  
+    .navbar-menu.active {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+    .navbar-menu a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Add styles for extra wide screens */
+  @media (min-width: 1600px) {
+    .navbar-container {
+      padding: 0 5%;
+    }
+  }
+  
+  @media (min-width: 2400px) {
+    .navbar-container {
+      padding: 0 15%;
+    }
+  }
+  

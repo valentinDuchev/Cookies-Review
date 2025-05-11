@@ -1,0 +1,1001 @@
+{
+  "products": [
+    {
+      "id": 10062383710474,
+      "name": "Apple Pie Cookie",
+      "price": 5.75,
+      "description": "Order Apple Pie Cookie Delivery\nUSA! USA!\n\nThese classics are as authentically American as…well, apple pie. Bursting with the essence of everybody’s favorite fruit, this apple pie filling cookie do not disappoint. Give your teacher one of these quintessential treats and you’ll be asked to stay after...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/applepie2_1.png?v=1746778132",
+      "rating": 4.1,
+      "reviewCount": 11,
+      "shopifyData": {
+        "id": 10062383710474,
+        "title": "Apple Pie Cookie",
+        "body_html": "<h2 data-mce-fragment=\"1\">Order Apple Pie Cookie Delivery</h2>\n<h3 data-mce-fragment=\"1\">USA! USA!<br data-mce-fragment=\"1\">\n</h3>\n<p data-mce-fragment=\"1\">These classics are as authentically American as…well, apple pie. Bursting with the essence of everybody’s favorite fruit, this<span data-mce-fragment=\"1\"> </span><strong data-mce-fragment=\"1\">apple pie filling cookie</strong><span data-mce-fragment=\"1\"> </span>do not disappoint. Give your teacher one of these quintessential treats and you’ll be asked to stay after class… <br data-mce-fragment=\"1\"></p>\n<h3 data-mce-fragment=\"1\">Apple Pie Cookie - It's All About The Apples</h3>\n<span data-mce-fragment=\"1\">Warm and chewy, you won’t be able to resist these straight-from-the-orchard delicacies. That’s right, friends, an </span><strong data-mce-fragment=\"1\">apple pie cookie</strong><span data-mce-fragment=\"1\"> a day keeps the hunger away. What makes these so tempting? As Eve can tell you, it’s all about the apples.</span>\n<p data-mce-fragment=\"1\">We use organic cartelized apples, which are so bitingly tangy that when we combine them with our curiously comforting cane sugar and vivacious vanilla, the end result is an audacious apple pie cookie that is worth being cast out of Eden for. So, order a batch today and cut yourself a supple slice of this sensual mainstay, guaranteed to make you say “Yum…”</p>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:52-04:00",
+        "handle": "apple-pie-cookie",
+        "updated_at": "2025-05-09T22:38:37-04:00",
+        "published_at": "2025-05-09T04:08:47-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383710474",
+        "variants": [
+          {
+            "product_id": 10062383710474,
+            "id": 51157270528266,
+            "title": "Default Title",
+            "price": "5.75",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:52-04:00",
+            "updated_at": "2025-05-09T04:08:52-04:00",
+            "taxable": true,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162379673866,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157270528266",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "product_id": 10062383710474,
+            "id": 12597658288394,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078601523466,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383710474,
+            "created_at": "2025-05-09T04:08:52-04:00",
+            "updated_at": "2025-05-09T04:08:52-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078601523466",
+            "width": 2059,
+            "height": 2069,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/applepie2_1.png?v=1746778132",
+            "variant_ids": []
+          },
+          {
+            "id": 55078601556234,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383710474,
+            "created_at": "2025-05-09T04:08:52-04:00",
+            "updated_at": "2025-05-09T04:08:52-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078601556234",
+            "width": 1440,
+            "height": 1440,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/applepienew_1.png?v=1746778132",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078601523466,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383710474,
+          "created_at": "2025-05-09T04:08:52-04:00",
+          "updated_at": "2025-05-09T04:08:52-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078601523466",
+          "width": 2059,
+          "height": 2069,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/applepie2_1.png?v=1746778132",
+          "variant_ids": []
+        }
+      }
+    },
+    {
+      "id": 10062383612170,
+      "name": "Belgian Hazelnut Cookie",
+      "price": 5.5,
+      "description": "Try out this limited edition cookie packed with hazelnuts and organic Nutella spread!\n\nAvailable for a limited time only!...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/BelgianHazelnut_BangCookies.png?v=1746778126",
+      "rating": 4.8,
+      "reviewCount": 4,
+      "shopifyData": {
+        "id": 10062383612170,
+        "title": "Belgian Hazelnut Cookie",
+        "body_html": "<h2 data-mce-fragment=\"1\">Try out this limited edition cookie packed with hazelnuts and organic Nutella spread!</h2>\n<h3 data-mce-fragment=\"1\">\n<br data-mce-fragment=\"1\">Available for a limited time only!</h3>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:46-04:00",
+        "handle": "belgian-hazelnut-cookie",
+        "updated_at": "2025-05-11T06:17:11-04:00",
+        "published_at": "2025-05-09T04:08:43-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383612170",
+        "variants": [
+          {
+            "product_id": 10062383612170,
+            "id": 51157269840138,
+            "title": "Default Title",
+            "price": "5.50",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:47-04:00",
+            "updated_at": "2025-05-09T04:08:47-04:00",
+            "taxable": true,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162378985738,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157269840138",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "product_id": 10062383612170,
+            "id": 12597658157322,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078601228554,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383612170,
+            "created_at": "2025-05-09T04:08:46-04:00",
+            "updated_at": "2025-05-09T04:08:46-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078601228554",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/BelgianHazelnut_BangCookies.png?v=1746778126",
+            "variant_ids": []
+          },
+          {
+            "id": 55078601261322,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383612170,
+            "created_at": "2025-05-09T04:08:46-04:00",
+            "updated_at": "2025-05-09T04:08:46-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078601261322",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/BelgianHazelnut_sliced_BangCookies.png?v=1746778126",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078601228554,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383612170,
+          "created_at": "2025-05-09T04:08:46-04:00",
+          "updated_at": "2025-05-09T04:08:46-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078601228554",
+          "width": 780,
+          "height": 690,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/BelgianHazelnut_BangCookies.png?v=1746778126",
+          "variant_ids": []
+        }
+      }
+    },
+    {
+      "id": 10062383546634,
+      "name": "Better than Oreo cookie",
+      "price": 5.75,
+      "description": "Try out this limited edition 'Better than Oreo' cookie.\n\nAvailable for a limited time only!...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/RockyRoadCookie_BangCookies.png?v=1746778122",
+      "rating": 5,
+      "reviewCount": 1,
+      "shopifyData": {
+        "id": 10062383546634,
+        "title": "Better than Oreo cookie",
+        "body_html": "<h2 data-mce-fragment=\"1\">Try out this limited edition 'Better than Oreo' cookie.<br data-mce-fragment=\"1\"><br data-mce-fragment=\"1\">\n</h2>\n<h3 data-mce-fragment=\"1\">Available for a limited time only!</h3>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:42-04:00",
+        "handle": "better-than-oreo-cookie",
+        "updated_at": "2025-05-10T08:28:56-04:00",
+        "published_at": "2025-05-09T04:08:38-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383546634",
+        "variants": [
+          {
+            "id": 51157269512458,
+            "product_id": 10062383546634,
+            "title": "Default Title",
+            "price": "5.75",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:42-04:00",
+            "updated_at": "2025-05-09T04:08:42-04:00",
+            "taxable": false,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162378658058,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157269512458",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "id": 12597658091786,
+            "product_id": 10062383546634,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078600179978,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383546634,
+            "created_at": "2025-05-09T04:08:42-04:00",
+            "updated_at": "2025-05-09T04:08:42-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078600179978",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/RockyRoadCookie_BangCookies.png?v=1746778122",
+            "variant_ids": []
+          },
+          {
+            "id": 55078600212746,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383546634,
+            "created_at": "2025-05-09T04:08:42-04:00",
+            "updated_at": "2025-05-09T04:08:42-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078600212746",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/BetterthanOreocookie_sliced_BangCookies.png?v=1746778122",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078600179978,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383546634,
+          "created_at": "2025-05-09T04:08:42-04:00",
+          "updated_at": "2025-05-09T04:08:42-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078600179978",
+          "width": 780,
+          "height": 690,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/RockyRoadCookie_BangCookies.png?v=1746778122",
+          "variant_ids": []
+        }
+      }
+    },
+    {
+      "id": 10062383448330,
+      "name": "Booze Caramel Sea Salt Chocolate",
+      "price": 5.5,
+      "description": "Our signature Sea Salt Chocolate Chunk filled with seductively smooth and creamy caramel. One little nibble and you'll surrender to its deep and lingering sensuality.\nSHIPPING BY MAIL NATIONALLY: Available Monday-Thursday. All orders must be received by 4PM EST to be eligible to be baked and shipped...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/sea_salt_caramel_inside_600x600_3533e5bf-a24d-4605-b70a-88fca80c5eda.png?v=1746778117",
+      "rating": 0,
+      "reviewCount": 0,
+      "shopifyData": {
+        "id": 10062383448330,
+        "title": "Booze Caramel Sea Salt Chocolate",
+        "body_html": "<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\">Our signature Sea Salt Chocolate Chunk filled with seductively smooth and creamy caramel. One little nibble and you'll surrender to its deep and lingering sensuality.</span></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"><strong data-mce-fragment=\"1\">SHIPPING BY MAIL NATIONALLY:</strong> Available Monday-Thursday. All orders must be received by 4PM EST to be eligible to be baked and shipped same day. All orders received after 4PM EST will be baked and shipped the following day. </span></p>\n<p data-mce-fragment=\"1\"><span data-mce-fragment=\"1\"> </span><strong data-mce-fragment=\"1\">LOCAL ON DEMAND DELIVERY: </strong>Available Monday-Sunday, 11AM-12AM midnight in the following cities: Jersey City, NJ, Hoboken, NJ, Union City, NJ, Secaucus, NJ and Weehawken, NJ only. More cities coming soon!</p>\n<span data-mce-fragment=\"1\">organic flour, organic cane sugar, organic brown sugar, grass-fed butter, organic dark chocolate, organic milk chocolate, organic eggs, organic caramel, organic corn starch, organic vanilla, sea salt, non-gmo baking powder, and baking soda.</span>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:37-04:00",
+        "handle": "booze-caramel-sea-salt-chocolate",
+        "updated_at": "2025-05-10T03:17:34-04:00",
+        "published_at": "2025-05-09T04:08:33-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383448330",
+        "variants": [
+          {
+            "id": 51157269053706,
+            "product_id": 10062383448330,
+            "title": "Default Title",
+            "price": "5.50",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:37-04:00",
+            "updated_at": "2025-05-09T04:08:37-04:00",
+            "taxable": true,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162378166538,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157269053706",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "id": 12597657960714,
+            "product_id": 10062383448330,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078599753994,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383448330,
+            "created_at": "2025-05-09T04:08:37-04:00",
+            "updated_at": "2025-05-09T04:08:37-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078599753994",
+            "width": 600,
+            "height": 600,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/sea_salt_caramel_inside_600x600_3533e5bf-a24d-4605-b70a-88fca80c5eda.png?v=1746778117",
+            "variant_ids": []
+          },
+          {
+            "id": 55078599786762,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383448330,
+            "created_at": "2025-05-09T04:08:37-04:00",
+            "updated_at": "2025-05-09T04:08:37-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078599786762",
+            "width": 600,
+            "height": 600,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/sea_salt_caramel_600x600_cd133002-ee33-4234-b97b-18b4218b7d54.png?v=1746778117",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078599753994,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383448330,
+          "created_at": "2025-05-09T04:08:37-04:00",
+          "updated_at": "2025-05-09T04:08:37-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078599753994",
+          "width": 600,
+          "height": 600,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/sea_salt_caramel_inside_600x600_3533e5bf-a24d-4605-b70a-88fca80c5eda.png?v=1746778117",
+          "variant_ids": []
+        }
+      }
+    },
+    {
+      "id": 10062383350026,
+      "name": "Butterscotch Sugar Cookie",
+      "price": 5.75,
+      "description": "Try out this limited edition cookie stuffed with dulce de leche and butterscotch chips.Available for a limited time only!...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/ButterscotchSugarCookie_BangCookies.png?v=1746778112",
+      "rating": 0,
+      "reviewCount": 0,
+      "shopifyData": {
+        "id": 10062383350026,
+        "title": "Butterscotch Sugar Cookie",
+        "body_html": "<h2 data-mce-fragment=\"1\">Try out this limited edition cookie stuffed with dulce de leche and butterscotch chips.<br data-mce-fragment=\"1\"><br data-mce-fragment=\"1\">Available for a limited time only!</h2>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:32-04:00",
+        "handle": "butterscotch-sugar-cookie",
+        "updated_at": "2025-05-09T12:13:50-04:00",
+        "published_at": "2025-05-09T04:08:29-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383350026",
+        "variants": [
+          {
+            "id": 51157268922634,
+            "product_id": 10062383350026,
+            "title": "Default Title",
+            "price": "5.75",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:32-04:00",
+            "updated_at": "2025-05-09T04:08:32-04:00",
+            "taxable": true,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162378068234,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157268922634",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "id": 12597657895178,
+            "product_id": 10062383350026,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078598574346,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383350026,
+            "created_at": "2025-05-09T04:08:32-04:00",
+            "updated_at": "2025-05-09T04:08:32-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078598574346",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/ButterscotchSugarCookie_BangCookies.png?v=1746778112",
+            "variant_ids": []
+          },
+          {
+            "id": 55078598607114,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383350026,
+            "created_at": "2025-05-09T04:08:32-04:00",
+            "updated_at": "2025-05-09T04:08:32-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078598607114",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/ButterscotchSugarCookie_sliced_BangCookies.png?v=1746778112",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078598574346,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383350026,
+          "created_at": "2025-05-09T04:08:32-04:00",
+          "updated_at": "2025-05-09T04:08:32-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078598574346",
+          "width": 780,
+          "height": 690,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/ButterscotchSugarCookie_BangCookies.png?v=1746778112",
+          "variant_ids": []
+        }
+      }
+    },
+    {
+      "id": 10062383284490,
+      "name": "Cereal Cookie",
+      "price": 5.75,
+      "description": "Try out this limited edition cookie stuffed with fruity cereal and white chocolate.\n\nAvailable for a limited time only!...",
+      "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/CerealCookie_sliced.png?v=1746778107",
+      "rating": 0,
+      "reviewCount": 0,
+      "shopifyData": {
+        "id": 10062383284490,
+        "title": "Cereal Cookie",
+        "body_html": "<h2 data-mce-fragment=\"1\">Try out this limited edition cookie stuffed with fruity cereal and white chocolate.<br data-mce-fragment=\"1\"><br data-mce-fragment=\"1\">\n</h2>\n<h3 data-mce-fragment=\"1\">Available for a limited time only!</h3>",
+        "vendor": "neli-zarkova",
+        "product_type": "",
+        "created_at": "2025-05-09T04:08:27-04:00",
+        "handle": "cereal-cookie",
+        "updated_at": "2025-05-10T08:14:52-04:00",
+        "published_at": "2025-05-09T04:08:23-04:00",
+        "template_suffix": null,
+        "published_scope": "global",
+        "tags": "",
+        "status": "active",
+        "admin_graphql_api_id": "gid://shopify/Product/10062383284490",
+        "variants": [
+          {
+            "id": 51157268496650,
+            "product_id": 10062383284490,
+            "title": "Default Title",
+            "price": "5.75",
+            "position": 1,
+            "inventory_policy": "deny",
+            "compare_at_price": null,
+            "option1": "Default Title",
+            "option2": null,
+            "option3": null,
+            "created_at": "2025-05-09T04:08:27-04:00",
+            "updated_at": "2025-05-09T04:08:27-04:00",
+            "taxable": true,
+            "barcode": "",
+            "fulfillment_service": "manual",
+            "grams": 142,
+            "inventory_management": "shopify",
+            "requires_shipping": true,
+            "sku": "",
+            "weight": 5,
+            "weight_unit": "oz",
+            "inventory_item_id": 53162377609482,
+            "inventory_quantity": 10,
+            "old_inventory_quantity": 10,
+            "admin_graphql_api_id": "gid://shopify/ProductVariant/51157268496650",
+            "image_id": null
+          }
+        ],
+        "options": [
+          {
+            "id": 12597657829642,
+            "product_id": 10062383284490,
+            "name": "Title",
+            "position": 1,
+            "values": [
+              "Default Title"
+            ]
+          }
+        ],
+        "images": [
+          {
+            "id": 55078596411658,
+            "alt": null,
+            "position": 1,
+            "product_id": 10062383284490,
+            "created_at": "2025-05-09T04:08:27-04:00",
+            "updated_at": "2025-05-09T04:08:27-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078596411658",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/CerealCookie_sliced.png?v=1746778107",
+            "variant_ids": []
+          },
+          {
+            "id": 55078596444426,
+            "alt": null,
+            "position": 2,
+            "product_id": 10062383284490,
+            "created_at": "2025-05-09T04:08:27-04:00",
+            "updated_at": "2025-05-09T04:08:27-04:00",
+            "admin_graphql_api_id": "gid://shopify/ProductImage/55078596444426",
+            "width": 780,
+            "height": 690,
+            "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/CerealCookie_BangCookies.png?v=1746778107",
+            "variant_ids": []
+          }
+        ],
+        "image": {
+          "id": 55078596411658,
+          "alt": null,
+          "position": 1,
+          "product_id": 10062383284490,
+          "created_at": "2025-05-09T04:08:27-04:00",
+          "updated_at": "2025-05-09T04:08:27-04:00",
+          "admin_graphql_api_id": "gid://shopify/ProductImage/55078596411658",
+          "width": 780,
+          "height": 690,
+          "src": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/CerealCookie_sliced.png?v=1746778107",
+          "variant_ids": []
+        }
+      }
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 10062383710474,
+      "name": "Sebastian Smith",
+      "email": "sebastian@example.com",
+      "rating": 5,
+      "title": "Amazing taste",
+      "review": "Honestly, the best apple pie cookie ever.",
+      "date": "2023-04-15T14:30:00Z",
+      "image": null,
+      "helpfulEmails": [
+        "user1@example.com",
+        "user2@example.com",
+        "valio@abv.bg"
+      ],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 2,
+      "productId": 10062383710474,
+      "name": "Jacqueline Martin",
+      "email": "jacqueline@example.com",
+      "rating": 5,
+      "title": "Mom's favorite",
+      "review": "Bought these for my mom's birthday. She absolutely loved it! Will be ordering again.",
+      "date": "2023-05-22T09:15:00Z",
+      "image": null,
+      "helpfulEmails": [
+        "user3@example.com",
+        "valio@abv.bg"
+      ],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 3,
+      "productId": 10062383710474,
+      "name": "Michael Johnson",
+      "email": "michael@example.com",
+      "rating": 4,
+      "title": "Great flavor",
+      "review": "Really enjoyed the apple flavor. Would buy again.",
+      "date": "2023-03-10T16:45:00Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 4,
+      "productId": 1,
+      "name": "Emma Wilson",
+      "email": "emma@example.com",
+      "rating": 5,
+      "title": "Perfect texture",
+      "review": "Crispy on the outside, chewy on the inside. Just perfect!",
+      "date": "2023-06-05T11:20:00Z",
+      "image": null,
+      "helpful": 7
+    },
+    {
+      "id": 5,
+      "productId": 1,
+      "name": "David Brown",
+      "email": "david@example.com",
+      "rating": 3,
+      "title": "Good but too sweet",
+      "review": "The cookie was good but a bit too sweet for my taste.",
+      "date": "2023-02-18T13:50:00Z",
+      "image": null,
+      "helpful": 2
+    },
+    {
+      "id": 6,
+      "productId": 1,
+      "name": "Sophia Garcia",
+      "email": "sophia@example.com",
+      "rating": 5,
+      "title": "Best cookie ever",
+      "review": "I've tried many cookies and this is by far the best one!",
+      "date": "2023-07-12T10:30:00Z",
+      "image": "/images/reviews/review-6.jpg",
+      "helpful": 9
+    },
+    {
+      "id": 7,
+      "productId": 1,
+      "name": "Daniel Martinez",
+      "email": "daniel@example.com",
+      "rating": 4,
+      "title": "Almost perfect",
+      "review": "Really good cookie, just wish it had more chocolate chips.",
+      "date": "2023-01-25T15:10:00Z",
+      "image": null,
+      "helpful": 1
+    },
+    {
+      "id": 8,
+      "productId": 1,
+      "name": "Olivia Taylor",
+      "email": "olivia@example.com",
+      "rating": 5,
+      "title": "Addictive",
+      "review": "Can't stop eating these! So delicious.",
+      "date": "2023-08-03T09:45:00Z",
+      "image": null,
+      "helpful": 4
+    },
+    {
+      "id": 9,
+      "productId": 1,
+      "name": "James Anderson",
+      "email": "james@example.com",
+      "rating": 4,
+      "title": "Great with coffee",
+      "review": "These cookies pair perfectly with my morning coffee.",
+      "date": "2023-09-17T14:20:00Z",
+      "image": "/images/reviews/review-9.jpg",
+      "helpful": 6
+    },
+    {
+      "id": 10,
+      "productId": 1,
+      "name": "Isabella Thomas",
+      "email": "isabella@example.com",
+      "rating": 5,
+      "title": "Worth every penny",
+      "review": "A bit pricey but absolutely worth it for the quality.",
+      "date": "2023-10-08T12:15:00Z",
+      "image": null,
+      "helpful": 3
+    },
+    {
+      "id": 11,
+      "productId": 1,
+      "name": "Ethan White",
+      "email": "ethan@example.com",
+      "rating": 5,
+      "title": "Perfect gift",
+      "review": "Sent these as a gift and the recipient loved them!",
+      "date": "2023-11-22T16:30:00Z",
+      "image": null,
+      "helpful": 2
+    },
+    {
+      "id": 12,
+      "productId": 1,
+      "name": "Ava Harris",
+      "email": "ava@example.com",
+      "rating": 4,
+      "title": "Consistent quality",
+      "review": "I've ordered these multiple times and they're always great.",
+      "date": "2023-12-05T10:50:00Z",
+      "image": "/images/reviews/review-12.jpg",
+      "helpful": 5
+    },
+    {
+      "id": 13,
+      "productId": 2,
+      "name": "Noah Clark",
+      "email": "noah@example.com",
+      "rating": 5,
+      "title": "Chocolate heaven",
+      "review": "If you love chocolate, you need to try these cookies!",
+      "date": "2023-05-14T13:40:00Z",
+      "image": null,
+      "helpful": 7
+    },
+    {
+      "id": 14,
+      "productId": 3,
+      "name": "Mia Lewis",
+      "email": "mia@example.com",
+      "rating": 4,
+      "title": "Just like grandma's",
+      "review": "These oatmeal cookies remind me of my grandmother's recipe.",
+      "date": "2023-06-30T11:25:00Z",
+      "image": null,
+      "helpful": 4
+    },
+    {
+      "id": 15,
+      "productId": 10062383710474,
+      "name": "Valio",
+      "email": "valio@abv.bg",
+      "rating": 2,
+      "title": "Valio we",
+      "review": "Valio Review",
+      "date": "2025-05-11T14:09:35.165Z",
+      "image": "/images/reviews/review-1746972575165-Screenshot 2025-04-01 204636.png",
+      "helpfulEmails": [
+        "valio@abv.bg"
+      ],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 16,
+      "productId": 10062383710474,
+      "name": "ddsds",
+      "email": "sdsd@ssa.bg",
+      "rating": 5,
+      "title": "ssaas",
+      "review": "assasa",
+      "date": "2025-05-11T14:28:43.965Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 17,
+      "productId": 10062383710474,
+      "name": "saasas",
+      "email": "sdsd@ssa.bg",
+      "rating": 3,
+      "title": "saassa",
+      "review": "asassa",
+      "date": "2025-05-11T14:28:49.860Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 18,
+      "productId": 10062383710474,
+      "name": "asasaas",
+      "email": "ssasasasdsd@ssa.bg",
+      "rating": 3,
+      "title": "assa",
+      "review": "saas",
+      "date": "2025-05-11T14:28:58.082Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 19,
+      "productId": 10062383710474,
+      "name": "gffffffff",
+      "email": "valentinducev77@gmail.com",
+      "rating": 5,
+      "title": "fggfgf",
+      "review": "gffgfgfg",
+      "date": "2025-05-11T14:29:06.464Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 20,
+      "productId": 10062383710474,
+      "name": "fgfgfg",
+      "email": "gffgfgsdsd@ssa.bg",
+      "rating": 5,
+      "title": "ds",
+      "review": "ds",
+      "date": "2025-05-11T14:29:23.928Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 21,
+      "productId": 10062383710474,
+      "name": "dssd",
+      "email": "sdsd@ssa.bg",
+      "rating": 4,
+      "title": "ds",
+      "review": "sd",
+      "date": "2025-05-11T14:29:30.009Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 22,
+      "productId": 10062383710474,
+      "name": "dsdsds",
+      "email": "dssdsdsd@ssa.bg",
+      "rating": 4,
+      "title": "hghghg",
+      "review": "jjkk",
+      "date": "2025-05-11T14:29:36.334Z",
+      "image": null,
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 23,
+      "productId": 10062383612170,
+      "name": "sasa",
+      "email": "assa@abv.bg",
+      "rating": 5,
+      "title": "sas",
+      "review": "assasa",
+      "date": "2025-05-11T15:11:58.629Z",
+      "image": "/images/reviews/review-1746976318628-Screenshot 2025-04-01 204636.png",
+      "helpfulEmails": [
+        "valentinducev77@gmail.com"
+      ],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 24,
+      "productId": 10062383612170,
+      "name": "Valio",
+      "email": "valentin_duchev@abv.bg",
+      "rating": 4,
+      "title": "Hahaha",
+      "review": "Jsjsjsj",
+      "date": "2025-05-11T15:30:11.432Z",
+      "image": "/images/reviews/review-1746977411430-IMG_7014.jpeg",
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 25,
+      "productId": 10062383612170,
+      "name": "Valentin Duchev",
+      "email": "valentinducev77@gmail.com",
+      "rating": 5,
+      "title": "fdf",
+      "review": "df",
+      "date": "2025-05-11T15:30:46.025Z",
+      "image": "/images/reviews/review-1746977446025-494358009_1478148963214429_3206290911917498768_n.jpg",
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 26,
+      "productId": 10062383612170,
+      "name": "Valentin Duchev",
+      "email": "valentinducev77@gmail.com",
+      "rating": 5,
+      "title": "asass",
+      "review": "asasas",
+      "date": "2025-05-11T15:46:59.109Z",
+      "image": "/images/reviews/review-1746978419109-greeting-card.jpg",
+      "helpfulEmails": [],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 27,
+      "productId": 10062383546634,
+      "name": "valio",
+      "email": "valentin_duchev@abv.bg",
+      "rating": 5,
+      "title": "dss",
+      "review": "assa",
+      "date": "2025-05-11T15:50:29.866Z",
+      "image": "/images/reviews/review-1746978629865-494358009_1478148963214429_3206290911917498768_n.jpg",
+      "helpfulEmails": [
+        "valentinducev77@gmail.com"
+      ],
+      "notHelpfulEmails": []
+    }
+  ]
+}
