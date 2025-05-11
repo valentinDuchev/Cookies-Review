@@ -8,10 +8,10 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 ### Installation
 
 1. Clone the repository:
-\`\`\`bash
-1.1. git clone https://github.com/yourusername/Cookies-Review.git 
-1.2. cd cookie-shop-review-system
-\`\`\`
+   ```bash
+   git clone https://github.com/yourusername/Cookies-Review.git
+   cd cookie-shop-review-system
+
 
 2. Install server dependencies:
 \`\`\`bash
