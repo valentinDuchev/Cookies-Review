@@ -2,9 +2,41 @@
 
 A full-stack e-commerce review system with a React frontend and Node.js backend. This application allows users to browse products, view and filter reviews, and submit their own reviews with images.
 
-![Cookie Shop Screenshot](http://localhost:5000/images/hero-cookies.jpg)
+![Cookie Shop Screenshot](src\assets\image.png)
 
-## Setup Instructions
+### Installation
+
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/yourusername/cookie-shop-review-system.git
+cd cookie-shop-review-system
+\`\`\`
+
+2. Install server dependencies:
+\`\`\`bash
+cd server
+npm install
+\`\`\`
+
+3. Install client dependencies:
+\`\`\`bash
+cd ../client
+npm install
+\`\`\`
+
+4. Start the server:
+\`\`\`bash
+cd ../server
+npm run dev
+\`\`\`
+
+5. Start the client:
+\`\`\`bash
+cd ../client
+npm run dev
+\`\`\`
+
+6. Open your browser and navigate to `http://localhost:5173`
 
 
 ## Table of Contents
@@ -105,39 +137,6 @@ ADMIN_API_ACCESS_TOKEN=your-shopify-admin-api-token
 PORT=5000
 \`\`\`
 
-### Installation
-
-1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/yourusername/cookie-shop-review-system.git
-cd cookie-shop-review-system
-\`\`\`
-
-2. Install server dependencies:
-\`\`\`bash
-cd server
-npm install
-\`\`\`
-
-3. Install client dependencies:
-\`\`\`bash
-cd ../client
-npm install
-\`\`\`
-
-4. Start the server:
-\`\`\`bash
-cd ../server
-npm run dev
-\`\`\`
-
-5. Start the client:
-\`\`\`bash
-cd ../client
-npm run dev
-\`\`\`
-
-6. Open your browser and navigate to `http://localhost:5173`
 
 ## Data Flow
 
