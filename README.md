@@ -2,7 +2,8 @@
 
 A full-stack e-commerce review system with a React frontend and Node.js backend. This application allows users to browse products, view and filter reviews, and submit their own reviews with images.
 
-![Cookie Shop Screenshot](src\assets\image.png)
+
+![Cookie Shop](client/react-review-app/src/assets/image.png)
 
 ### Installation
 
