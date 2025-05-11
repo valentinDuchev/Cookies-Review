@@ -9,7 +9,7 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 
 1. Clone the repository:
 \`\`\`bash
-git clone https://github.com/yourusername/cookie-shop-review-system.git
+git clone https://github.com/yourusername/Cookies-Review.git
 cd cookie-shop-review-system
 \`\`\`
 
