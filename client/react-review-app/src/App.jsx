@@ -45,11 +45,12 @@ function App() {
               </div>
 
               <div className="footer-contact">
-                <h3>Contact Us</h3>
-                <p>123 Baker Street</p>
-                <p>Cookieville, CA 90210</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: hello@cookiesshop.com</p>
+                <h3>Contact Me</h3>
+                <p>Varna, Bulgaria</p>
+                <p>Phone: +(359) 899-921-106</p>
+                <p>Email: valentinducev77@gmail.com</p>
+                <p>Github: valentinDuchev</p>
+
               </div>
             </div>
 

@@ -93,64 +93,9 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="about-preview">
-        <div className="content-container">
-          <div className="about-grid">
-            <div className="about-image">
-              <img src={getImageUrl("/images/bakery.jpg") || "/placeholder.svg"} alt="Our Bakery" />
-            </div>
-            <div className="about-content">
-              <h2>Our Story</h2>
-              <p>
-                At Cookies, we believe in creating moments of joy through our delicious treats. Our journey began with a
-                simple passion for baking and has evolved into a commitment to crafting the perfect cookie experience.
-              </p>
-              <p>
-                Every cookie is made with care using only the finest ingredients, ensuring that each bite is as
-                delightful as the last.
-              </p>
-              <Link to="/about" className="learn-more-button">
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
-      <section className="testimonials">
-        <div className="content-container">
-          <h2>What Our Customers Say</h2>
-          <div className="testimonial-grid">
-            <div className="testimonial-card">
-              <div className="testimonial-rating">
-                <StarRating rating={5} />
-              </div>
-              <p className="testimonial-text">
-                "These cookies are absolutely amazing! The peanut butter chocolate chip is my favorite."
-              </p>
-              <p className="testimonial-author">- Sarah J.</p>
-            </div>
-            <div className="testimonial-card">
-              <div className="testimonial-rating">
-                <StarRating rating={5} />
-              </div>
-              <p className="testimonial-text">
-                "I ordered these for a party and everyone loved them. Will definitely order again!"
-              </p>
-              <p className="testimonial-author">- Michael T.</p>
-            </div>
-            <div className="testimonial-card">
-              <div className="testimonial-rating">
-                <StarRating rating={4} />
-              </div>
-              <p className="testimonial-text">
-                "Great texture and flavor. The white chocolate macadamia is to die for."
-              </p>
-              <p className="testimonial-author">- Emily R.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   )
 }

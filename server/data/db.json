@@ -6,8 +6,8 @@
       "price": 5.75,
       "description": "Order Apple Pie Cookie Delivery\nUSA! USA!\n\nThese classics are as authentically American as…well, apple pie. Bursting with the essence of everybody’s favorite fruit, this apple pie filling cookie do not disappoint. Give your teacher one of these quintessential treats and you’ll be asked to stay after...",
       "image": "https://cdn.shopify.com/s/files/1/0897/5407/5402/files/applepie2_1.png?v=1746778132",
-      "rating": 4.1,
-      "reviewCount": 11,
+      "rating": 4.2,
+      "reviewCount": 12,
       "shopifyData": {
         "id": 10062383710474,
         "title": "Apple Pie Cookie",
@@ -995,6 +995,19 @@
       "helpfulEmails": [
         "valentinducev77@gmail.com"
       ],
+      "notHelpfulEmails": []
+    },
+    {
+      "id": 28,
+      "productId": 10062383710474,
+      "name": "sdosd",
+      "email": "sdhhsd@sjsj.bg",
+      "rating": 5,
+      "title": "sasa",
+      "review": "asassa",
+      "date": "2025-05-11T18:40:22.980Z",
+      "image": "/images/reviews/review-1746988822979-494358009_1478148963214429_3206290911917498768_n.jpg",
+      "helpfulEmails": [],
       "notHelpfulEmails": []
     }
   ]

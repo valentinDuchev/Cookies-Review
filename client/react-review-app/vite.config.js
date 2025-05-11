@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173, // Default Vite port
     proxy: {
       "/api": {
-        target: "http://172.20.10.13:5000", // Your IP and server port
+        target: 'http://localhost:5000', 
         changeOrigin: true,
         secure: false,
       },
