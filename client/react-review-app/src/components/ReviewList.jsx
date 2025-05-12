@@ -107,7 +107,7 @@ function ReviewList({ reviews, pagination, onPageChange, onHelpfulClick, onNotHe
 
             {review.image && (
               <div className="review-image">
-                <img src={`http://localhost:5000${review.image}`} alt="Review" />
+                <img src={`${review.image}`} alt="Review" />
               </div>
             )}
 
