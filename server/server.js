@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const path = require("path")
-const connectDB = require("./config/db")
+const connectDB = require("./data/config/db")
 require("dotenv").config()
 
 // Import routes
