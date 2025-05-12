@@ -1,11 +1,12 @@
 const express = require("express")
 const cors = require("cors")
 const path = require("path")
+const connectDB = require("./config/db")
+require("dotenv").config()
+
+// Import routes
 const apiRoutes = require("./routes/api")
 const imagesRoutes = require("./routes/images")
-const testBlobRoutes = require("./routes/test-blob")
-const connectDB = require("./data/config/db")
-require("dotenv").config()
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -34,8 +35,14 @@ app.use("/api", apiRoutes)
 // Images route
 app.use("/api/images", imagesRoutes)
 
-// Test Blob route
-app.use("/api/test-blob", testBlobRoutes)
+// Test Blob route - only import and use if the file exists
+try {
+  const testBlobRoutes = require("./routes/test-blob")
+  app.use("/api/test-blob", testBlobRoutes)
+  console.log("Test Blob routes loaded successfully")
+} catch (error) {
+  console.error("Failed to load test-blob routes:", error.message)
+}
 
 // Error handling middleware
 app.use((err, req, res, next) => {
