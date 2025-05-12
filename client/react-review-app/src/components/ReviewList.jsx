@@ -37,7 +37,7 @@ function ReviewList({ reviews, pagination, onPageChange, onHelpfulClick, onNotHe
           ? `/api/reviews/${modalReviewId}/helpful`
           : `/api/reviews/${modalReviewId}/not-helpful`
 
-      const response = await fetch(`${endpoint}`, {
+      const response = await fetch(`https://cookies-review-server.vercel.app${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

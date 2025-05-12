@@ -15,7 +15,7 @@ function HomePage() {
     const fetchProducts = async () => {
       try {
         // Use relative path with the proxy
-        const response = await fetch(`/api/products`)
+        const response = await fetch(`https://cookies-review-server.vercel.app/api/products`)
         if (!response.ok) {
           throw new Error("Failed to fetch products")
         }

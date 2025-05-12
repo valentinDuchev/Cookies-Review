@@ -19,7 +19,7 @@ function ProductDetailPage() {
         console.log(`Fetching product with ID: ${productId}`) // Debug log
 
         // Use relative path with the proxy
-        const response = await fetch(`/api/products/${productId}`)
+        const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${productId}`)
 
         if (!response.ok) {
           console.error(`Failed to fetch product: ${response.status} ${response.statusText}`)

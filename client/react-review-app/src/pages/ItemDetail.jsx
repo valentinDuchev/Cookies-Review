@@ -14,7 +14,7 @@ function ItemDetail() {
   useEffect(() => {
     const fetchItem = async () => {
       try {
-        const response = await axios.get(`/api/items/${id}`)
+        const response = await axios.get(`https://cookies-review-server.vercel.app/api/items/${id}`)
         setItem(response.data)
         setLoading(false)
       } catch (err) {
@@ -29,7 +29,7 @@ function ItemDetail() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/api/items/${id}`)
+      await axios.delete(`https://cookies-review-server.vercel.app/api/items/${id}`)
       navigate("/items")
     } catch (err) {
       setError("Failed to delete item")
