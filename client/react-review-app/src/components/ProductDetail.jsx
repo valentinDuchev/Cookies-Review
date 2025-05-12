@@ -49,7 +49,7 @@ function ProductDetail({ product, onBack }) {
         queryParams.append("onlyWithImages", "true")
       }
 
-      const response = await fetch(`/api/products/${product.id}/reviews?${queryParams.toString()}`)
+      const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?${queryParams.toString()}`)
 
 
 
