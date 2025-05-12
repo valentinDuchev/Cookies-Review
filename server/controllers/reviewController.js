@@ -1,14 +1,6 @@
 const Review = require("../models/Review")
 const Product = require("../models/Product")
-const path = require("path")
-const fs = require("fs")
-const { v4: uuidv4 } = require("uuid")
-
-// Ensure upload directory exists
-const uploadDir = path.join(__dirname, "../public/images/reviews")
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true })
-}
+const { saveFile } = require("../utils/fileStorage")
 
 // Helper function to update product ratings
 const updateProductRatings = async (productId) => {
@@ -149,25 +141,35 @@ const reviewController = {
   // Add a new review for a product
   addProductReview: async (req, res) => {
     try {
+      console.log("addProductReview called with body:", req.body)
+      console.log("File included:", req.file ? "Yes" : "No")
+
       const productId = Number(req.params.productId)
 
-      // Check if product exists
+      // Validate required fields
+      const { name, email, rating, title, review } = req.body
+      if (!name || !email || !rating || !title || !review) {
+        return res.status(400).json({ message: "Missing required fields" })
+      }
+
+      // Check if the product exists
       const product = await Product.findOne({ id: productId })
       if (!product) {
         return res.status(404).json({ message: "Product not found" })
       }
 
       // Handle image upload if present
-      let imagePath = null
+      let imageUrl = null
       if (req.file) {
-        const fileName = `review-${Date.now()}-${req.file.originalname}`
-        const filePath = path.join(uploadDir, fileName)
-
-        // Save the file
-        fs.writeFileSync(filePath, req.file.buffer)
-
-        // Store relative path in database
-        imagePath = `/images/reviews/${fileName}`
+        console.log("Uploading image to Blob storage...", req.file.originalname)
+        try {
+          // Use the saveFile utility which now forwards to Blob storage
+          imageUrl = await saveFile(req.file)
+          console.log("Image uploaded successfully:", imageUrl)
+        } catch (uploadError) {
+          console.error("Error uploading image:", uploadError)
+          return res.status(500).json({ message: "Failed to upload image", error: uploadError.message })
+        }
       }
 
       // Get the next ID (highest ID + 1)
@@ -178,13 +180,13 @@ const reviewController = {
       const newReview = new Review({
         id: nextId,
         productId,
-        name: req.body.name,
-        email: req.body.email,
-        rating: Number(req.body.rating),
-        title: req.body.title,
-        review: req.body.review,
+        name,
+        email,
+        rating: Number(rating),
+        title,
+        review,
         date: new Date(),
-        image: imagePath,
+        image: imageUrl, // Store the full URL from Blob storage
         helpfulEmails: [],
         notHelpfulEmails: [],
       })
@@ -202,10 +204,11 @@ const reviewController = {
       reviewResponse.helpfulCount = 0
       reviewResponse.notHelpfulCount = 0
 
+      // Respond with the review data
       res.status(201).json(reviewResponse)
     } catch (error) {
       console.error("Error adding review:", error)
-      res.status(500).json({ message: error.message })
+      res.status(500).json({ message: "Failed to add review", error: error.message })
     }
   },
 
