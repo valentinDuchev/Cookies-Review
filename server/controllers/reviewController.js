@@ -1,6 +1,6 @@
 const Review = require("../models/Review")
 const Product = require("../models/Product")
-const blobStorage = require("../utils/blobStorage")
+const { put, del, list } = require("@vercel/blob")
 
 // Helper function to update product ratings
 const updateProductRatings = async (productId) => {
@@ -22,6 +22,51 @@ const updateProductRatings = async (productId) => {
     await Product.updateOne({ id: productId }, { $set: { rating, reviewCount } })
   } catch (error) {
     console.error(`Error updating product ratings: ${error}`)
+  }
+}
+
+// Direct Blob storage functions - defined inline to avoid import issues
+const uploadImageToBlob = async (file) => {
+  console.log("uploadImageToBlob called with file:", file ? file.originalname : "no file")
+
+  if (!file || !file.buffer) {
+    throw new Error("Invalid file object")
+  }
+
+  // Generate a unique filename
+  const filename = `review-${Date.now()}-${Math.random().toString(36).substring(2, 15)}`
+  const extension = file.originalname ? file.originalname.split(".").pop() : "jpg"
+  const fullFilename = `${filename}.${extension}`
+
+  console.log(`Preparing to upload file ${fullFilename} to Vercel Blob...`)
+
+  // Check if BLOB_READ_WRITE_TOKEN is set
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    console.error("BLOB_READ_WRITE_TOKEN environment variable is not set")
+    throw new Error("BLOB_READ_WRITE_TOKEN environment variable is not set")
+  }
+
+  console.log("BLOB_READ_WRITE_TOKEN is set, proceeding with upload...")
+
+  try {
+    // Upload to Vercel Blob
+    const blob = await put(fullFilename, file.buffer, {
+      access: "public",
+      contentType: file.mimetype || "image/jpeg",
+    })
+
+    console.log(`Successfully uploaded to Vercel Blob: ${blob.url}`)
+
+    // Return the URL and other metadata
+    return {
+      url: blob.url,
+      pathname: blob.pathname,
+      contentType: blob.contentType,
+      size: blob.size,
+    }
+  } catch (error) {
+    console.error("Error uploading to Vercel Blob:", error)
+    throw error
   }
 }
 
@@ -163,8 +208,8 @@ const reviewController = {
       if (req.file) {
         console.log("Uploading image to Blob storage...", req.file.originalname)
         try {
-          // Use blobStorage.uploadImage
-          const result = await blobStorage.uploadImage(req.file)
+          // Use the inline function instead of importing
+          const result = await uploadImageToBlob(req.file)
           imageUrl = result.url
           console.log("Image uploaded successfully:", imageUrl)
         } catch (uploadError) {
