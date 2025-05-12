@@ -121,7 +121,7 @@ function ProductDetail({ product, onBack }) {
         formData.append("image", reviewData.image)
       }
 
-      const response = await fetch(`/api/products/${product.id}/reviews`, {
+      const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${product.id}/reviews`, {
         method: "POST",
         body: formData,
       })
