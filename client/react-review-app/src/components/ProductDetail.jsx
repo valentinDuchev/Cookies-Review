@@ -49,9 +49,9 @@ function ProductDetail({ product, onBack }) {
         queryParams.append("onlyWithImages", "true")
       }
 
-      const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?${queryParams.toString()}`)
-
-
+      const response = await fetch(
+        `https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?${queryParams.toString()}`,
+      )
 
       if (!response.ok) {
         throw new Error("Failed to fetch reviews")
@@ -130,13 +130,27 @@ function ProductDetail({ product, onBack }) {
         throw new Error("Failed to submit review")
       }
 
+      // Get the new review data from the response
+      const newReview = await response.json()
+
+      // Update the product data with the new rating and review count
+      // This is what updates the review summary section
+      product.reviewCount += 1
+
+      // Recalculate the average rating
+      const newTotalRating = product.rating * (product.reviewCount - 1) + newReview.rating
+      product.rating = newTotalRating / product.reviewCount
+
+      // Update star counts
+      const newStarCounts = { ...starCounts }
+      const roundedRating = Math.round(newReview.rating)
+      newStarCounts[roundedRating] = (newStarCounts[roundedRating] || 0) + 1
+      setStarCounts(newStarCounts)
+
       // Refresh reviews
       fetchReviews(1, filters)
       setCurrentPage(1)
       setShowReviewForm(false)
-
-      // Refresh star counts
-      fetchStarCounts()
     } catch (error) {
       console.error("Error submitting review:", error)
     }
