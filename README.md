@@ -82,7 +82,7 @@ The system integrates with Shopify to fetch product data and stores reviews in a
 - Review filtering by rating and images
 - Review sorting by highest/lowest rating, most helpful, and date
 - Review pagination
-- Helpful/not helpful voting system with email verification
+- Helpful/not helpful voting system with email verification - only one like/dislike per email
 
 ### User Interface
 - Responsive design for mobile and desktop
