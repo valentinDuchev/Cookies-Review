@@ -1,6 +1,6 @@
 const Review = require("../models/Review")
 const Product = require("../models/Product")
-const { saveFile } = require("../utils/fileStorage")
+const { uploadImage } = require("../utils/blobStorage")
 
 // Helper function to update product ratings
 const updateProductRatings = async (productId) => {
@@ -163,8 +163,9 @@ const reviewController = {
       if (req.file) {
         console.log("Uploading image to Blob storage...", req.file.originalname)
         try {
-          // Use the saveFile utility which now forwards to Blob storage
-          imageUrl = await saveFile(req.file)
+          // Use uploadImage directly from blobStorage.js
+          const result = await uploadImage(req.file)
+          imageUrl = result.url
           console.log("Image uploaded successfully:", imageUrl)
         } catch (uploadError) {
           console.error("Error uploading image:", uploadError)

@@ -11,9 +11,22 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// Log environment variables (without values)
+console.log("Environment variables available:", Object.keys(process.env).join(", "))
+console.log("BLOB_READ_WRITE_TOKEN exists:", !!process.env.BLOB_READ_WRITE_TOKEN)
+console.log("MONGODB_URI exists:", !!process.env.MONGODB_URI)
+
 // Basic test route
 app.get("/api/test", (req, res) => {
-  res.json({ message: "API is working correctly", timestamp: new Date().toISOString() })
+  res.json({
+    message: "API is working correctly",
+    timestamp: new Date().toISOString(),
+    env: {
+      NODE_ENV: process.env.NODE_ENV,
+      BLOB_TOKEN_EXISTS: !!process.env.BLOB_READ_WRITE_TOKEN,
+      MONGODB_URI_EXISTS: !!process.env.MONGODB_URI,
+    },
+  })
 })
 
 // Import and use API routes
@@ -34,9 +47,18 @@ try {
   console.error("Failed to load images routes:", error.message)
 }
 
+// Import and use test-blob route
+try {
+  const testBlobRoutes = require("./routes/test-blob")
+  app.use("/api/test-blob", testBlobRoutes)
+  console.log("Test Blob routes loaded successfully")
+} catch (error) {
+  console.error("Failed to load test-blob routes:", error.message)
+}
+
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack)
+  console.error("Server error:", err)
   res.status(500).json({
     message: "Something went wrong!",
     error: process.env.NODE_ENV === "development" ? err.message : undefined,
