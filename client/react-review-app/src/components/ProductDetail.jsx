@@ -75,7 +75,7 @@ function ProductDetail({ product, onBack }) {
   const fetchStarCounts = async () => {
     try {
       // Fetch all reviews without pagination to count stars
-      const response = await fetch(`/api/products/${product.id}/reviews?limit=1000`)
+      const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?limit=1000`)
 
       if (!response.ok) {
         throw new Error("Failed to fetch reviews for star counts")
