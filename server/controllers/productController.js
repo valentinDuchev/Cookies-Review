@@ -1,5 +1,5 @@
-const fs = require("fs")
-const path = require("path")
+const Product = require("../models/Product")
+const Review = require("../models/Review")
 const Shopify = require("shopify-api-node")
 
 // Initialize Shopify client
@@ -8,27 +8,12 @@ const shopify = new Shopify({
   accessToken: process.env.ADMIN_API_ACCESS_TOKEN,
 })
 
-// Path to our mock database
-const dbPath = path.join(__dirname, "../data/db.json")
-
-// Helper function to read the database
-const readDatabase = () => {
-  const data = fs.readFileSync(dbPath, "utf8")
-  return JSON.parse(data)
-}
-
-// Helper function to write to the database
-const writeDatabase = (data) => {
-  fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), "utf8")
-}
-
 const productController = {
   // Get all products
   getAllProducts: async (req, res) => {
     try {
-      // Read from local DB (which is synced with Shopify)
-      const db = readDatabase()
-      res.json(db.products)
+      const products = await Product.find()
+      res.json(products)
     } catch (error) {
       console.error("Error fetching products:", error)
       res.status(500).json({ message: error.message })
@@ -40,11 +25,10 @@ const productController = {
     try {
       const productId = Number(req.params.id)
 
-      // First check local DB
-      const db = readDatabase()
-      let product = db.products.find((p) => p.id === productId)
+      // First check MongoDB
+      let product = await Product.findOne({ id: productId })
 
-      // If not found in local DB, try to fetch directly from Shopify
+      // If not found in MongoDB, try to fetch directly from Shopify
       if (!product) {
         try {
           const shopifyProduct = await shopify.product.get(productId)
@@ -63,13 +47,16 @@ const productController = {
           }
 
           // Calculate rating and review count
-          const productReviews = db.reviews.filter((r) => r.productId === productId)
+          const productReviews = await Review.find({ productId })
           product.reviewCount = productReviews.length
 
           if (productReviews.length > 0) {
             const totalRating = productReviews.reduce((sum, review) => sum + review.rating, 0)
             product.rating = Number.parseFloat((totalRating / productReviews.length).toFixed(1))
           }
+
+          // Save the product to MongoDB for future requests
+          await Product.create(product)
         } catch (shopifyError) {
           console.error("Error fetching product from Shopify:", shopifyError)
           return res.status(404).json({ message: "Product not found" })
@@ -90,11 +77,10 @@ const productController = {
   // Force sync products from Shopify
   syncProducts: async (req, res) => {
     try {
+      console.log("Syncing products from Shopify...")
+
       // Get products from Shopify
       const products = await shopify.product.list({ limit: 50 })
-
-      // Read current database
-      const db = readDatabase()
 
       // Transform Shopify products to our format
       const transformedProducts = products.map((product) => {
@@ -105,7 +91,7 @@ const productController = {
           id: product.id,
           name: product.title,
           price: Number.parseFloat(variant.price),
-          description: product.body_html.replace(/<[^>]*>?/gm, "").substring(0, 300) + "...",
+          description: product.body_html ? product.body_html.replace(/<[^>]*>?/gm, "").substring(0, 300) + "..." : "",
           image: product.image ? product.image.src : "/images/placeholder.jpg",
           rating: 0, // Will be calculated based on reviews
           reviewCount: 0, // Will be calculated based on reviews
@@ -113,37 +99,40 @@ const productController = {
         }
       })
 
-      // Update products in DB
-      db.products = transformedProducts
+      // Use bulkWrite to efficiently update or insert products
+      const bulkOps = transformedProducts.map((product) => ({
+        updateOne: {
+          filter: { id: product.id },
+          update: product,
+          upsert: true,
+        },
+      }))
+
+      await Product.bulkWrite(bulkOps)
 
       // Calculate ratings and review counts
-      if (db.reviews && db.reviews.length > 0) {
-        // Create a map of product IDs to their reviews
-        const reviewsByProduct = {}
+      for (const product of transformedProducts) {
+        const productReviews = await Review.find({ productId: product.id })
+        const reviewCount = productReviews.length
 
-        db.reviews.forEach((review) => {
-          if (!reviewsByProduct[review.productId]) {
-            reviewsByProduct[review.productId] = []
-          }
-          reviewsByProduct[review.productId].push(review)
-        })
+        if (reviewCount > 0) {
+          const totalRating = productReviews.reduce((sum, review) => sum + review.rating, 0)
+          const avgRating = Number.parseFloat((totalRating / reviewCount).toFixed(1))
 
-        // Update product ratings and review counts
-        db.products.forEach((product) => {
-          const productReviews = reviewsByProduct[product.id] || []
-          product.reviewCount = productReviews.length
-
-          if (productReviews.length > 0) {
-            const totalRating = productReviews.reduce((sum, review) => sum + review.rating, 0)
-            product.rating = Number.parseFloat((totalRating / productReviews.length).toFixed(1))
-          }
-        })
+          await Product.updateOne(
+            { id: product.id },
+            {
+              $set: {
+                rating: avgRating,
+                reviewCount: reviewCount,
+              },
+            },
+          )
+        }
       }
 
-      // Save updated DB
-      writeDatabase(db)
-
-      res.json({ message: "Products synced successfully", count: db.products.length })
+      const updatedCount = await Product.countDocuments()
+      res.json({ message: "Products synced successfully", count: updatedCount })
     } catch (error) {
       console.error("Error syncing products:", error)
       res.status(500).json({ message: error.message })

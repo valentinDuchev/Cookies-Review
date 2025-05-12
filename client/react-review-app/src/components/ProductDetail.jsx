@@ -49,7 +49,9 @@ function ProductDetail({ product, onBack }) {
         queryParams.append("onlyWithImages", "true")
       }
 
-      const response = await fetch(`http://localhost:5000/api/products/${product.id}/reviews?${queryParams.toString()}`)
+      const response = await fetch(`/api/products/${product.id}/reviews?${queryParams.toString()}`)
+
+
 
       if (!response.ok) {
         throw new Error("Failed to fetch reviews")
@@ -73,7 +75,7 @@ function ProductDetail({ product, onBack }) {
   const fetchStarCounts = async () => {
     try {
       // Fetch all reviews without pagination to count stars
-      const response = await fetch(`http://localhost:5000/api/products/${product.id}/reviews?limit=1000`)
+      const response = await fetch(`/api/products/${product.id}/reviews?limit=1000`)
 
       if (!response.ok) {
         throw new Error("Failed to fetch reviews for star counts")
@@ -119,7 +121,7 @@ function ProductDetail({ product, onBack }) {
         formData.append("image", reviewData.image)
       }
 
-      const response = await fetch(`http://localhost:5000/api/products/${product.id}/reviews`, {
+      const response = await fetch(`/api/products/${product.id}/reviews`, {
         method: "POST",
         body: formData,
       })

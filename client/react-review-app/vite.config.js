@@ -9,10 +9,13 @@ export default defineConfig({
     port: 5173, // Default Vite port
     proxy: {
       "/api": {
-        target: 'http://localhost:5000', 
+        target: 'https://cookies-review-server.vercel.app', 
         changeOrigin: true,
         secure: false,
       },
     },
   },
 })
+
+
+//https://cookies-review-server.vercel.app/api/products

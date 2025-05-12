@@ -21,7 +21,7 @@ function ProductsPage() {
         console.log("Fetching products list") // Debug log
 
         // Use relative path with the proxy
-        const response = await fetch("/api/products")
+        const response = await fetch(`/api/products`)
 
         if (!response.ok) {
           console.error(`Failed to fetch products: ${response.status} ${response.statusText}`)

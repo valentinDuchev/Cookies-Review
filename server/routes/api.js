@@ -1,16 +1,24 @@
 const express = require("express")
 const router = express.Router()
 const multer = require("multer")
+const path = require("path")
+const fs = require("fs")
 const productController = require("../controllers/productController")
 const reviewController = require("../controllers/reviewController")
 
-// Configure multer for memory storage
-const upload = multer({ storage: multer.memoryStorage() })
+// Configure multer for file uploads
+const storage = multer.memoryStorage() // Use memory storage for flexibility
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 5 * 1024 * 1024, // 5MB limit
+  },
+})
 
 // Product routes
 router.get("/products", productController.getAllProducts)
 router.get("/products/:id", productController.getProductById)
-router.post("/products/sync", productController.syncProducts) // Force sync with Shopify
+router.get("/sync-products", productController.syncProducts)
 
 // Review routes
 router.get("/products/:productId/reviews", reviewController.getProductReviews)
