@@ -3,7 +3,8 @@ const cors = require("cors")
 const path = require("path")
 const apiRoutes = require("./routes/api")
 const imagesRoutes = require("./routes/images")
-const connectDB = require("./config/db")
+const testBlobRoutes = require("./routes/test-blob")
+const connectDB = require("./data/config/db")
 require("dotenv").config()
 
 const app = express()
@@ -32,6 +33,9 @@ app.use("/api", apiRoutes)
 
 // Images route
 app.use("/api/images", imagesRoutes)
+
+// Test Blob route
+app.use("/api/test-blob", testBlobRoutes)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
