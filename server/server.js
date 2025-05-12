@@ -1,12 +1,7 @@
 const express = require("express")
 const cors = require("cors")
-const path = require("path")
 const connectDB = require("./data/config/db")
 require("dotenv").config()
-
-// Import routes
-const apiRoutes = require("./routes/api")
-const imagesRoutes = require("./routes/images")
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -16,47 +11,36 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-// Set proper content type for API responses
-app.use((req, res, next) => {
-  if (req.path.startsWith("/api")) {
-    res.setHeader("Content-Type", "application/json")
-  }
-  next()
+// Basic test route
+app.get("/api/test", (req, res) => {
+  res.json({ message: "API is working correctly", timestamp: new Date().toISOString() })
 })
 
-// Serve static files only in development
-if (process.env.NODE_ENV !== "production") {
-  app.use(express.static(path.join(__dirname, "public")))
+// Import and use API routes
+try {
+  const apiRoutes = require("./routes/api")
+  app.use("/api", apiRoutes)
+  console.log("API routes loaded successfully")
+} catch (error) {
+  console.error("Failed to load API routes:", error.message)
 }
 
-// API routes
-app.use("/api", apiRoutes)
-
-// Images route
-app.use("/api/images", imagesRoutes)
-
-// Test Blob route - only import and use if the file exists
+// Import and use images route
 try {
-  const testBlobRoutes = require("./routes/test-blob")
-  app.use("/api/test-blob", testBlobRoutes)
-  console.log("Test Blob routes loaded successfully")
+  const imagesRoutes = require("./routes/images")
+  app.use("/api/images", imagesRoutes)
+  console.log("Images routes loaded successfully")
 } catch (error) {
-  console.error("Failed to load test-blob routes:", error.message)
+  console.error("Failed to load images routes:", error.message)
 }
 
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack)
-
-  // Always return JSON for API routes
-  if (req.path.startsWith("/api")) {
-    res.status(500).json({
-      message: "Something went wrong!",
-      error: process.env.NODE_ENV === "development" ? err.message : undefined,
-    })
-  } else {
-    res.status(500).send("Server Error")
-  }
+  res.status(500).json({
+    message: "Something went wrong!",
+    error: process.env.NODE_ENV === "development" ? err.message : undefined,
+  })
 })
 
 // Connect to MongoDB and start server
