@@ -4,8 +4,8 @@ import HomePage from "./pages/HomePage"
 import ProductsPage from "./pages/ProductsPage"
 import ProductDetailPage from "./pages/ProductDetailPage"
 import AboutPage from "./pages/AboutPage"
-import ApiTest from "./components/ApiTest"
-import ApiDebug from "./components/ApiDebug" // Import the new debug component
+// import ApiTest from "./components/ApiTest"
+// import ApiDebug from "./components/ApiDebug" // Import the new debug component
 import "./App.css"
 
 // Define and export the backend URL
