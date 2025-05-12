@@ -11,6 +11,8 @@ function ItemDetail() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  console.log(id)
+
   useEffect(() => {
     const fetchItem = async () => {
       try {

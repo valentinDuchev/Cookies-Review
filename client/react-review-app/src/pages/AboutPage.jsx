@@ -27,7 +27,7 @@ function AboutPage() {
                             </p>
                         </div>
                         <div className="about-image">
-                            <img src="src\assets\images.png" alt="Our Story" />
+                            <img src="https://pqnuqvt6lmapn7tc.public.blob.vercel-storage.com/React%2BNode-upXNHob9OgxuzvBEyj1ZZIpNOwmmAT.png" alt="Our Story" />
                         </div>
                     </div>
                 </section>
@@ -37,7 +37,7 @@ function AboutPage() {
                     <div className="team-grid">
                         <div className="team-member">
                             <div className="team-image">
-                                <img src="src\assets\images.jpg" alt="Jane Smith" />
+                                <img src="https://pqnuqvt6lmapn7tc.public.blob.vercel-storage.com/React-L7Hcgjr3Xa4aV7ktVADJgQCv0NNrsz.jpg" alt="Jane Smith" />
                             </div>
                             <h3>ReactJS</h3>
 
@@ -48,7 +48,7 @@ function AboutPage() {
                         </div>
                         <div className="team-member">
                             <div className="team-image">
-                                <img src="src\assets\NodeJS-1-scaled.webp" alt="Michael Johnson" />
+                                <img src="https://pqnuqvt6lmapn7tc.public.blob.vercel-storage.com/Node-H5LVQ4wMUfOsvKA9qImE39zsj6CCA8.webp" alt="Michael Johnson" />
                             </div>
                             <h3>NodeJS</h3>
                             <p className="team-role">Back-End</p>
@@ -58,7 +58,7 @@ function AboutPage() {
                         </div>
                         <div className="team-member">
                             <div className="team-image">
-                                <img src="src\assets\1_NQZOwcv91WcHZipkuYq5kg.jpg" alt="Sarah Williams" />
+                                <img src="https://pqnuqvt6lmapn7tc.public.blob.vercel-storage.com/DB-TzkiqsIkwxvGb8CmJSFXcO2C2p9s3X.jpg" alt="Sarah Williams" />
                             </div>
                             <h3>MongoDB+PostgreSQL</h3>
                             <p className="team-role">Database</p>

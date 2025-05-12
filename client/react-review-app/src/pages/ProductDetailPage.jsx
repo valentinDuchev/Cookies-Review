@@ -13,6 +13,7 @@ function ProductDetailPage() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    console.log(productId)
     const fetchProduct = async () => {
       try {
         setLoading(true)
