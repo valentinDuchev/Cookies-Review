@@ -5,7 +5,13 @@ A full-stack e-commerce review system with a React frontend and Node.js backend.
 
 ![Cookie Shop](client/react-review-app/src/assets/image.png)
 
-### Installation
+###  Open it in browser
+The app has been deployed using Vercel for both the client and the server
+It uses the vercel blob for storing the images
+You can access the website using the link below: 
+[text](https://cookies-review.vercel.app/)
+
+### Local environment Installation
 
 1. Clone the repository:
    ```bash
