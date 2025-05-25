@@ -1,43 +1,23 @@
 "use client"
 
-import { useState } from "react"
 import "./StarRating.css"
 
-//showEmpty
-
-function StarRating({ rating, editable = false, onChange = false, maxStars = 5 }) {
-  const [hoverRating, setHoverRating] = useState(0)
-  const stars = Array.from({ length: maxStars }, (_, i) => i + 1)
-
-  const handleMouseEnter = (value) => {
-    if (editable) {
-      setHoverRating(value)
-    }
-  }
-
-  const handleMouseLeave = () => {
-    if (editable) {
-      setHoverRating(0)
-    }
-  }
-
-  const handleClick = (value) => {
+function StarRating({ rating, maxStars = 5, editable = false, onChange }) {
+  const handleClick = (index) => {
     if (editable && onChange) {
-      onChange(value)
+      onChange(index + 1)
     }
   }
 
   return (
-    <div className={`star-rating ${editable ? "editable" : ""}`} onMouseLeave={handleMouseLeave}>
-      {stars.map((star) => (
+    <div className={`star-rating ${editable ? "editable" : ""}`}>
+      {[...Array(maxStars)].map((_, i) => (
         <span
-          key={star}
-          className={`star ${star <= (hoverRating || rating) ? "filled" : "empty"}`}
-          onClick={() => handleClick(star)}
-          onMouseEnter={() => handleMouseEnter(star)}
-          role={editable ? "button" : "presentation"}
-          tabIndex={editable ? 0 : undefined}
-          aria-label={editable ? `Rate ${star} stars` : undefined}
+          key={i}
+          className={`star ${i < Math.floor(rating) ? "filled" : ""} ${
+            i === Math.floor(rating) && rating % 1 > 0 ? "half-filled" : ""
+          }`}
+          onClick={() => handleClick(i)}
         >
           ★
         </span>

@@ -75,7 +75,9 @@ function ProductDetail({ product, onBack }) {
   const fetchStarCounts = async () => {
     try {
       // Fetch all reviews without pagination to count stars
-      const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?limit=1000`)
+      const response = await fetch(
+        `https://cookies-review-server.vercel.app/api/products/${product.id}/reviews?limit=1000`,
+      )
 
       if (!response.ok) {
         throw new Error("Failed to fetch reviews for star counts")
@@ -191,7 +193,7 @@ function ProductDetail({ product, onBack }) {
   const additionalImages = getAdditionalImages()
 
   // Calculate total reviews for fractions
-  const totalReviews = pagination ? pagination.totalReviews : 0
+  const _totalReviews = pagination ? pagination.totalReviews : 0
 
   return (
     <div className="product-detail">
@@ -240,19 +242,12 @@ function ProductDetail({ product, onBack }) {
           ) : (
             <p className="product-description">{product.description}</p>
           )}
-
-          {/* <button className="write-review-button" onClick={() => setShowReviewForm(true)}>
-            Write a Review
-          </button> */}
         </div>
       </div>
 
       <div className="reviews-section">
         <div className="reviews-header">
           <h2>Customer reviews</h2>
-          <button className="write-review-button" onClick={() => setShowReviewForm(true)}>
-            Leave a review
-          </button>
         </div>
 
         <div className="reviews-summary">
@@ -260,7 +255,6 @@ function ProductDetail({ product, onBack }) {
             <div className="stars-display">
               <StarRating rating={product.rating} />
             </div>
-            <div className="rating-number">{product.rating.toFixed(1)}</div>
             <div className="review-count-text">Based on {product.reviewCount} reviews</div>
           </div>
 
@@ -271,9 +265,9 @@ function ProductDetail({ product, onBack }) {
 
               return (
                 <div key={stars} className="rating-bar-row">
-                  <div className="stars-display-fixed">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <span key={i} className={`star ${i < stars ? "filled" : "empty"}`}>
+                  <div className="rating-stars">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className={`star ${i < stars ? "filled" : ""}`}>
                         ★
                       </span>
                     ))}
@@ -281,16 +275,25 @@ function ProductDetail({ product, onBack }) {
                   <div className="rating-bar">
                     <div className="rating-bar-fill" style={{ width: `${percentage}%` }}></div>
                   </div>
-                  <div className="rating-count">
-                    {count}/{product.reviewCount}
-                  </div>
+                  <div className="rating-count">{count}</div>
                 </div>
               )
             })}
           </div>
+
+          <div className="leave-review-wrapper">
+            <button className="leave-review-button" onClick={() => setShowReviewForm(true)}>
+              Leave a review
+            </button>
+          </div>
         </div>
 
-        <ReviewFilters onFilterChange={handleFilterChange} totalReviews={totalReviews} starCounts={starCounts} />
+        <ReviewFilters
+          onFilterChange={handleFilterChange}
+          starCounts={starCounts}
+          totalReviews={product.reviewCount}
+          currentFilters={filters}
+        />
 
         {loading ? (
           <div className="loading">Loading reviews...</div>

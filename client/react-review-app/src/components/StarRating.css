@@ -1,37 +1,38 @@
 .star-rating {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .star {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-    margin-right: 2px;
-    cursor: default;
-  }
-  
-  .star.filled {
-    color: #ffc107;
-  }
-  
-  .star.empty {
-    color: #e0e0e0;
-  }
-  
-  .star-rating.editable .star {
-    cursor: pointer;
-  }
-  
-  /* Remove the problematic hover selectors that were causing the right-to-left behavior */
-  /* Instead, we're now handling hover state with React state in the component */
-  
-  /* Add smaller stars for the rating bars */
-  .stars-label .star-rating .star {
-    font-size: 1rem;
-  }
-  
-  /* Make stars in the overall rating larger */
-  .overall-rating .star-rating .star {
-    font-size: 1.4rem;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  color: #e0e0e0;
+  font-size: 1.3rem;
+  margin-right: 1px;
+  cursor: pointer; /* Added cursor: pointer to fix the text cursor issue */
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star.half-filled {
+  position: relative;
+  color: #e0e0e0;
+}
+
+.star.half-filled::before {
+  content: "★";
+  position: absolute;
+  color: #ffc107;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Editable star rating styles */
+.star-rating.editable .star {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star-rating.editable .star:hover {
+  color: #ffc107;
+}

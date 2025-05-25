@@ -13,22 +13,18 @@ function ProductDetailPage() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    console.log(productId)
     const fetchProduct = async () => {
       try {
         setLoading(true)
-        console.log(`Fetching product with ID: ${productId}`) // Debug log
 
         // Use relative path with the proxy
         const response = await fetch(`https://cookies-review-server.vercel.app/api/products/${productId}`)
 
         if (!response.ok) {
-          console.error(`Failed to fetch product: ${response.status} ${response.statusText}`)
           throw new Error(`Failed to fetch product: ${response.status} ${response.statusText}`)
         }
 
         const data = await response.json()
-        console.log("Product data received:", data) // Debug log
         setProduct(data)
         setLoading(false)
       } catch (error) {

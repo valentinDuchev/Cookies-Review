@@ -3,12 +3,10 @@
 import { useState } from "react"
 import "./ReviewFilters.css"
 
-//totalReviews
-
-function ReviewFilters({ onFilterChange, starCounts }) {
-  const [filterRating, setFilterRating] = useState(null)
-  const [sortBy, setSortBy] = useState("highestRating")
-  const [onlyWithImages, setOnlyWithImages] = useState(false)
+function ReviewFilters({ onFilterChange, starCounts, currentFilters }) {
+  const [filterRating, setFilterRating] = useState(currentFilters.filterRating)
+  const [sortBy, setSortBy] = useState(currentFilters.sortBy)
+  const [onlyWithImages, setOnlyWithImages] = useState(currentFilters.onlyWithImages)
   const [showFilterOptions, setShowFilterOptions] = useState(false)
 
   const handleFilterChange = (option) => {
@@ -48,21 +46,6 @@ function ReviewFilters({ onFilterChange, starCounts }) {
     if (filterRating === 1) return "1 Star"
     if (onlyWithImages) return "With Images"
     return "All Reviews"
-  }
-
-  const _getSortLabel = () => {
-    switch (sortBy) {
-      case "highestRating":
-        return "Highest Rating"
-      case "lowestRating":
-        return "Lowest Rating"
-      case "mostHelpful":
-        return "Most Helpful"
-      case "date":
-        return "Most Recent"
-      default:
-        return "Highest Rating"
-    }
   }
 
   return (
@@ -136,7 +119,7 @@ function ReviewFilters({ onFilterChange, starCounts }) {
       </div>
 
       <div className="sort-dropdown">
-        <label>Sort By:</label>
+        <label>Sort by:</label>
         <div className="dropdown">
           <select className="dropdown-select" value={sortBy} onChange={(e) => handleSortChange(e.target.value)}>
             <option value="highestRating">Highest Rating</option>

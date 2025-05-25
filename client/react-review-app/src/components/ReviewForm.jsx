@@ -6,7 +6,7 @@ import "./ReviewForm.css"
 
 //productId, productName
 
-function ReviewForm({  onSubmit, onClose }) {
+function ReviewForm({ onSubmit, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
